@@ -24,7 +24,7 @@ class Order(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
-class FastStreamLogs(models.Model):
+class KafkaError(models.Model):
     key = models.CharField(max_length=255)
     value = models.CharField(max_length=255)
     error = models.CharField(max_length=255)

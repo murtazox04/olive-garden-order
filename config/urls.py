@@ -15,8 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from decouple import config
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/', include('core.urls')),
+    path("payments/", include("payme.urls")),
 ]
+
+
+if config('ENV_TYPE') == 'local':
+    import debug_toolbar
+
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

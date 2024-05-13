@@ -1,6 +1,6 @@
 Django==5.0.6
 djangorestframework==3.14.0
-uvicorn==0.29.0
 payme-pkg==2.6.6
+confluent-kafka==2.3.0
 python-decouple==3.8
 django-debug-toolbar==4.3.0
