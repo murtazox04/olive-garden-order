@@ -1,4 +1,4 @@
-Django==5.0.6
+Django==5.0.8
 djangorestframework==3.14.0
 payme-pkg==2.6.6
 confluent-kafka==2.3.0
